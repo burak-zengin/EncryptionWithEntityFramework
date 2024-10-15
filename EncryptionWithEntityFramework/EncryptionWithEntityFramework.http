@@ -1,0 +1,6 @@
+@EncryptionWithEntityFramework_HostAddress = http://localhost:5201
+
+GET {{EncryptionWithEntityFramework_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

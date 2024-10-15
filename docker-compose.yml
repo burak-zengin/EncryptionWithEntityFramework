@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  encryptionwithentityframework:
+    image: ${DOCKER_REGISTRY-}encryptionwithentityframework
+    build:
+      context: .
+      dockerfile: EncryptionWithEntityFramework/Dockerfile
+  database:
+    hostname: database
+    image: "postgres"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "P@ssw0rd!"
+      POSTGRES_DB: Users
+    ports:
+      - 5432:5432 
